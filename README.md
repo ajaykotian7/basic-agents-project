@@ -69,7 +69,7 @@ uv run workflows/orchestration.py
 
 Each script prints its results as labelled sections: a heading for each request, then the intermediate steps (tool calls, routing decisions, check results, parsed details) and the final answer. `routing.py` and `orchestration.py` also log progress lines with timestamps while they run.
 
-To see what a full orchestrator–workers run looks like without spending tokens, open [`workflows/output.md`](workflows/output.md).
+To see what a full orchestrator–workers run looks like without spending tokens, open [`workflows/output.md`](workflows/output.md). That sample was generated with `target_length=1000`. The script is set to 200 words by default to keep test runs cheap.
 
 > **Note:** Every run makes real OpenAI API calls and costs tokens. `orchestration.py` is the most expensive. It makes one planning call, one call per blog section, and one review call that rewrites the whole post.
 
