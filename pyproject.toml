@@ -1,0 +1,22 @@
+[project]
+name = "basic-agents-project"
+version = "0.1.0"
+description = "Hands-on examples of basic LLM agent building blocks and workflow patterns using the OpenAI API"
+readme = "README.md"
+authors = [
+    { name = "ajaykotian", email = "ajaykotian7@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "openai>=3.29.0",
+    "pydantic>=2.14.1",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+basic-agents-project = "basic_agents_project:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
